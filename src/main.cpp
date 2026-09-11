@@ -20,6 +20,9 @@ int main() {
         }
 
         switch (command) {
+            case 0:
+                std::cout << "Программа завершена\n";
+                break;
             case 1: {
                 std::size_t n;
                 std::cout << "Введите размер массива: ";
