@@ -13,4 +13,4 @@ int* array_remove(int* arr, std::size_t& size, std::size_t pos); // удален
 
 void array_print(const int* arr, std::size_t size);
 
-int* array_merge(const int* a, size_t na, const int* b, size_t nb, size_t& out_size); //cлияние двух отсортированных массивов
+int* array_merge(const int* a, std::size_t na, const int* b, std::size_t nb, std::size_t& out_size); //cлияние двух отсортированных массивов
