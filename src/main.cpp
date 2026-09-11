@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array_ops.h"
+#include "../include/laba1/array_ops.hpp"
 
 
 int main() {
