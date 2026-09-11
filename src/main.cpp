@@ -1,5 +1,6 @@
+#include "laba1/array_ops.hpp"
+
 #include <iostream>
-#include "../include/laba1/array_ops.hpp"
 
 
 int main() {
@@ -29,8 +30,8 @@ int main() {
                     break;
                 }
 
-                array_delete(arr);
-                arr = array_create(n);
+                laba1::array_delete(arr);
+                arr = laba1::array_create(n);
                 size = n;
 
                 std::cout << "Введите " << size << " элементов:\n";
@@ -40,7 +41,7 @@ int main() {
                 break;
             }
             case 2: {
-                array_delete(arr);
+                laba1::array_delete(arr);
                 size = 0;
                 break;
             }
@@ -68,7 +69,7 @@ int main() {
                     break;
                 }
 
-                arr = array_insert(arr, size, pos, value);
+                arr = laba1::array_insert(arr, size, pos, value);
                 break;
             }
             case 4: {
@@ -85,7 +86,7 @@ int main() {
                     break;
                 }
 
-                arr = array_remove(arr, size, pos);
+                arr = laba1::array_remove(arr, size, pos);
                 break;
             }
             case 5: {
@@ -100,12 +101,12 @@ int main() {
                     break;
                 }
 
-                arr = array_resize(arr, size, new_size);
+                arr = laba1::array_resize(arr, size, new_size);
                 size = new_size;
                 break;
             }
             case 6: {
-                array_print(arr, size);
+                laba1::array_print(arr, size);
                 break;
             }
             case 7: {
@@ -121,8 +122,8 @@ int main() {
                     break;
                 }
 
-                array_delete(a);
-                a = array_create(na);
+                laba1::array_delete(a);
+                a = laba1::array_create(na);
                 std::cout << "Введите первый массив\n";
                 for (std::size_t i = 0; i < na; ++i) {
                     std::cin >> a[i];
@@ -133,23 +134,23 @@ int main() {
                     std::cin.clear();
                     std::cin.ignore(10000, '\n');
                     std::cout<< "Некорректный ввод\n";
-                    array_delete(a);
+                    laba1::array_delete(a);
                     break;
                 }
 
-                array_delete(b);
-                b = array_create(nb);
+                laba1::array_delete(b);
+                b = laba1::array_create(nb);
                 std::cout << "Введите второй массив\n";
                 for (std::size_t i = 0; i < nb; ++i) {
                     std::cin >> b[i];
                 }
 
-                array_delete(arr);
-                arr = array_merge(a, na, b, nb, out_size);
+                laba1::array_delete(arr);
+                arr = laba1::array_merge(a, na, b, nb, out_size);
                 size = out_size;
 
-                array_delete(a);
-                array_delete(b);
+                laba1::array_delete(a);
+                laba1::array_delete(b);
                 break;
             }
             default:

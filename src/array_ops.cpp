@@ -1,6 +1,9 @@
-#include <iostream>
-#include "../include/laba1/array_ops.hpp"
+#include "laba1/array_ops.hpp"
 
+#include <iostream>
+
+
+namespace laba1 {
 int* array_create(std::size_t size) {
     return new int[size];
 }
@@ -86,4 +89,5 @@ int* array_merge(const int* a, std::size_t na, const int* b, std::size_t nb, std
     }
 
     return new_arr;
+}
 }
